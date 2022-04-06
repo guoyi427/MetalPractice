@@ -13,6 +13,7 @@
 		3048408B27FD7BED0049BD17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3048408927FD7BED0049BD17 /* Main.storyboard */; };
 		3048408D27FD7BF00049BD17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3048408C27FD7BF00049BD17 /* Assets.xcassets */; };
 		3048409027FD7BF00049BD17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3048408E27FD7BF00049BD17 /* LaunchScreen.storyboard */; };
+		3048409827FD7DE30049BD17 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3048409727FD7DE30049BD17 /* Renderer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,8 @@
 		3048408C27FD7BF00049BD17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3048408F27FD7BF00049BD17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3048409127FD7BF00049BD17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3048409727FD7DE30049BD17 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		3048409927FD7FF70049BD17 /* MetalPractice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MetalPractice.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +59,11 @@
 		3048408227FD7BED0049BD17 /* MetalPractice */ = {
 			isa = PBXGroup;
 			children = (
+				3048409927FD7FF70049BD17 /* MetalPractice.entitlements */,
 				3048408327FD7BED0049BD17 /* AppDelegate.swift */,
 				3048408527FD7BED0049BD17 /* SceneDelegate.swift */,
 				3048408727FD7BED0049BD17 /* ViewController.swift */,
+				3048409727FD7DE30049BD17 /* Renderer.swift */,
 				3048408927FD7BED0049BD17 /* Main.storyboard */,
 				3048408C27FD7BF00049BD17 /* Assets.xcassets */,
 				3048408E27FD7BF00049BD17 /* LaunchScreen.storyboard */,
@@ -138,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3048409827FD7DE30049BD17 /* Renderer.swift in Sources */,
 				3048408827FD7BED0049BD17 /* ViewController.swift in Sources */,
 				3048408427FD7BED0049BD17 /* AppDelegate.swift in Sources */,
 				3048408627FD7BED0049BD17 /* SceneDelegate.swift in Sources */,
@@ -287,6 +293,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MetalPractice/MetalPractice.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QEJW2BZ99E;
@@ -297,16 +304,21 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.guoyi.MetalPractice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 13.0;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
 			};
 			name = Debug;
 		};
@@ -315,6 +327,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MetalPractice/MetalPractice.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QEJW2BZ99E;
@@ -325,16 +338,21 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.guoyi.MetalPractice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 13.0;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
 			};
 			name = Release;
 		};
