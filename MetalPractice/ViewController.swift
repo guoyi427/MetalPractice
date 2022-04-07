@@ -14,8 +14,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         let mtkView = MTKView(frame: view.bounds, device: MTLCreateSystemDefaultDevice())
         view.addSubview(mtkView)
-        mtkView.enableSetNeedsDisplay = true
-        mtkView.clearColor = MTLClearColorMake(0.5, 0.5, 0, 1)
+//        mtkView.enableSetNeedsDisplay = true
+//        mtkView.clearColor = MTLClearColorMake(0.5, 0.5, 0, 1)
         let renderer = Renderer(view: mtkView)
         renderer.mtkView(mtkView, drawableSizeWillChange: mtkView.drawableSize)
         mtkView.delegate = renderer
